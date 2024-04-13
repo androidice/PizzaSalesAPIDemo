@@ -16,6 +16,8 @@ namespace PizzaSalesAPIDemo.Extensions
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IPizzaTypeRepository, PizzaTypeRepository>();
             services.AddTransient<IPizzaRepository, PizzaRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IOrderDetailsRepository, OrderDetailsRepository>();
 
             return services;
         }

@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPI.Services", "P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPI.Domain", "PizzaSalesAPI.Domain\PizzaSalesAPI.Domain.csproj", "{1F8E4443-4436-441D-81BA-3433F30ACA10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaSalesAPI.Repository", "PizzaSalesAPI.Repository\PizzaSalesAPI.Repository.csproj", "{EF118559-C0CA-459A-A3ED-1B21162E405B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPI.Repository", "PizzaSalesAPI.Repository\PizzaSalesAPI.Repository.csproj", "{EF118559-C0CA-459A-A3ED-1B21162E405B}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PizzaSalesAPI.DBSchema", "PizzaSalesAPI.DBSchema\PizzaSalesAPI.DBSchema.sqlproj", "{E539D797-B7C6-443E-A272-D02FB6AF746E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,12 @@ Global
 		{EF118559-C0CA-459A-A3ED-1B21162E405B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF118559-C0CA-459A-A3ED-1B21162E405B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF118559-C0CA-459A-A3ED-1B21162E405B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E539D797-B7C6-443E-A272-D02FB6AF746E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E539D797-B7C6-443E-A272-D02FB6AF746E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E539D797-B7C6-443E-A272-D02FB6AF746E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E539D797-B7C6-443E-A272-D02FB6AF746E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E539D797-B7C6-443E-A272-D02FB6AF746E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E539D797-B7C6-443E-A272-D02FB6AF746E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Primitives;
-using PissaSalesAPI.Domain.Models;
+using PizzaSalesAPI.Domain.Models;
 using PizzaSalesAPI.Infrastructure.Interfaces;
 using PizzaSalesAPI.Repository.Interfaces;
 
@@ -41,7 +41,6 @@ namespace PizzaSalesAPI.Infrastructure
                 Category = category,
                 Ingredients = ingredients
             });
-            _unitOfWork.Save();
 
             return true;
         }

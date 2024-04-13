@@ -1,6 +1,6 @@
 ﻿using PizzaSalesAPI.Infrastructure.Interfaces;
 using PizzaSalesAPI.Repository.Interfaces;
-using PissaSalesAPI.Domain.Models;
+using PizzaSalesAPI.Domain.Models;
 
 namespace PizzaSalesAPI.Infrastructure
 {
@@ -40,7 +40,6 @@ namespace PizzaSalesAPI.Infrastructure
                 Size = size,
                 Price = price
             });
-            _unitOfWork.Save();
 
             return true;
         }

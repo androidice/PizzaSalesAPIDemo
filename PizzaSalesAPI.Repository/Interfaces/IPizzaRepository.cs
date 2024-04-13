@@ -1,4 +1,4 @@
-﻿using PissaSalesAPI.Domain.Models;
+﻿using PizzaSalesAPI.Domain.Models;
 
 namespace PizzaSalesAPI.Repository.Interfaces
 {

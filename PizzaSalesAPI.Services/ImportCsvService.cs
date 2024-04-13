@@ -12,18 +12,10 @@ namespace PizzaSalesAPI.Services
         }
         public void ImportData(string location, ICSVProcessor csvProcessor)
         {
-            try
-            {
-              File.ReadAllLines(location)
-                        .Skip(1)
-                        .Select(lineItem =>  csvProcessor.ImportData(lineItem))
-                        .ToList();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogMessage(ex.Message);
-                throw ex;
-            }
+            File.ReadAllLines(location)
+                         .Skip(1)
+                         .Select(lineItem => csvProcessor.ImportData(lineItem))
+                         .ToList();
         }
     }
 }

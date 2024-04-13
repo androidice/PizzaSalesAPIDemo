@@ -2,7 +2,7 @@
 
 namespace PizzaSalesAPI.Repository.Interfaces
 {
-    public interface IPizzaTypeRepository: IGenericRepository<PizzaTypes>
+    public interface IOrderDetailsRepository: IGenericRepository<OrderDetails>
     {
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PissaSalesAPI.Domain.Models;
+using PizzaSalesAPI.Domain.Models;
 
 namespace PizzaSalesAPI.Domain
 {
@@ -15,8 +15,18 @@ namespace PizzaSalesAPI.Domain
                 .HasOne<PizzaTypes>(m => m.PizzaTypes)
                 .WithMany(m => m.Pizzas)
                 .HasForeignKey(m => m.PizzaTypeId)
-                .OnDelete(DeleteBehavior.Cascade); ;
-                        
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<OrderDetails>()
+                .HasOne<Orders>(m => m.Orders)
+                .WithMany(m => m.OrderDetails)
+                .HasForeignKey(m => m.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<OrderDetails>()
+               .HasOne<Pizzas>(m => m.Pizzas)
+               .WithMany(m => m.OrderDetails)
+               .HasForeignKey(m => m.PizzaId);
         }
 
         public DbSet<PizzaTypes> PizzaTypes { get; set;}

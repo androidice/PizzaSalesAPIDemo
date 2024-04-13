@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PissaSalesAPI.Domain.Models
+namespace PizzaSalesAPI.Domain.Models
 {
     public abstract class BaseEntity<T>
     {

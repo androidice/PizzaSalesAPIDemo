@@ -4,9 +4,9 @@ using PizzaSalesAPI.Repository.Interfaces;
 
 namespace PizzaSalesAPI.Repository
 {
-    public class PizzaRepository: GenericRepository<Pizzas>, IPizzaRepository
+    public class OrderRepository: GenericRepository<Orders>, IOrderRepository
     {
-        public PizzaRepository(PizzaSalesAPIContext dbContext) : base(dbContext)
+        public OrderRepository(PizzaSalesAPIContext dbContext) : base(dbContext)
         {
         }
     }

@@ -8,14 +8,20 @@ namespace PizzaSalesAPI.Repository
         public readonly PizzaSalesAPIContext _dbContext;
         public IPizzaRepository PizzaRepo { get; }
         public IPizzaTypeRepository PizzaTypeRepo { get; }
+        public IOrderRepository OrderRepo { get; }
+        public IOrderDetailsRepository OrderDetailsRepo { get; }
 
         public UnitOfWork(PizzaSalesAPIContext dbContext, 
                           IPizzaTypeRepository pizzaTypeRepo,
-                          IPizzaRepository pizzaRepo)
+                          IPizzaRepository pizzaRepo,
+                          IOrderRepository orderRepo,
+                          IOrderDetailsRepository orderDetailsRepo)
         {
             _dbContext = dbContext;
             PizzaTypeRepo = pizzaTypeRepo;
             PizzaRepo = pizzaRepo;  
+            OrderRepo = orderRepo;
+            OrderDetailsRepo = orderDetailsRepo;
         }
 
         public int Save()
