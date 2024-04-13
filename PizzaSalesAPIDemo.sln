@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPIDemo", "PizzaSalesAPIDemo\PizzaSalesAPIDemo.csproj", "{9EA732D7-51B7-499F-A908-203980CD1FC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPI.Infrastructure", "PizzaSalesAPI.Infrastructure\PizzaSalesAPI.Infrastructure.csproj", "{221D2FF4-7DAF-4262-BABB-6BB6EA1F23E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPI.Contracts", "PizzaSalesAPI.Contracts\PizzaSalesAPI.Contracts.csproj", "{9E6E23B6-0FA2-4276-9198-41294560A868}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPI.Services", "PizzaSalesAPI.Services\PizzaSalesAPI.Services.csproj", "{D40AF590-AE35-465E-B74C-739E9402E06B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaSalesAPI.Domain", "PizzaSalesAPI.Domain\PizzaSalesAPI.Domain.csproj", "{1F8E4443-4436-441D-81BA-3433F30ACA10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaSalesAPI.Repository", "PizzaSalesAPI.Repository\PizzaSalesAPI.Repository.csproj", "{EF118559-C0CA-459A-A3ED-1B21162E405B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EA732D7-51B7-499F-A908-203980CD1FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA732D7-51B7-499F-A908-203980CD1FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA732D7-51B7-499F-A908-203980CD1FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA732D7-51B7-499F-A908-203980CD1FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{221D2FF4-7DAF-4262-BABB-6BB6EA1F23E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{221D2FF4-7DAF-4262-BABB-6BB6EA1F23E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{221D2FF4-7DAF-4262-BABB-6BB6EA1F23E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{221D2FF4-7DAF-4262-BABB-6BB6EA1F23E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6E23B6-0FA2-4276-9198-41294560A868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6E23B6-0FA2-4276-9198-41294560A868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6E23B6-0FA2-4276-9198-41294560A868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6E23B6-0FA2-4276-9198-41294560A868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40AF590-AE35-465E-B74C-739E9402E06B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40AF590-AE35-465E-B74C-739E9402E06B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40AF590-AE35-465E-B74C-739E9402E06B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40AF590-AE35-465E-B74C-739E9402E06B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8E4443-4436-441D-81BA-3433F30ACA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8E4443-4436-441D-81BA-3433F30ACA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8E4443-4436-441D-81BA-3433F30ACA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8E4443-4436-441D-81BA-3433F30ACA10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF118559-C0CA-459A-A3ED-1B21162E405B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF118559-C0CA-459A-A3ED-1B21162E405B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF118559-C0CA-459A-A3ED-1B21162E405B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF118559-C0CA-459A-A3ED-1B21162E405B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEF6BADB-C4B7-4A11-BD2C-BDE1B701E886}
+	EndGlobalSection
+EndGlobal
