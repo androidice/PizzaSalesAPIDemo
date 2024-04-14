@@ -34,6 +34,9 @@ namespace PizzaSalesAPI.Infrastructure
             string category = lineItem.Substring(0, end_index);
             string ingredients = lineItem.Substring(end_index + 1);
 
+            var entity = _unitOfWork.PizzaTypeRepo.GetById(id).Result;
+            if (entity != null) return true;
+
             _unitOfWork.PizzaTypeRepo.Add(new PizzaTypes()
             {
                 Id = id,

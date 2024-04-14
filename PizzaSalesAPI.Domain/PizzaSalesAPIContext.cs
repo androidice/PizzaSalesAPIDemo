@@ -7,6 +7,7 @@ namespace PizzaSalesAPI.Domain
     {
         public PizzaSalesAPIContext(DbContextOptions<PizzaSalesAPIContext> options) : base(options)
         {
+           
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,5 +32,7 @@ namespace PizzaSalesAPI.Domain
 
         public DbSet<PizzaTypes> PizzaTypes { get; set;}
         public DbSet<Pizzas>  Pizzas { get; set;}
+        public DbSet<Orders> Orders { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }
     }
 }

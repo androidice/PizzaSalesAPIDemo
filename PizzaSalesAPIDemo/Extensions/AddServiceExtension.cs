@@ -10,6 +10,7 @@ namespace PizzaSalesAPIDemo.Extensions
     {
         public static IServiceCollection AddServices(this IServiceCollection services) { 
             services.AddTransient<IImportCsvService, ImportCsvService>();
+            services.AddTransient<IOrderSummaryService, OrderSummaryService>();
 
             services.AddTransient<PizzaSalesAPI.Infrastructure.Utitities.ILogger, Logger>();
 

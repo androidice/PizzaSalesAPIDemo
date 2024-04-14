@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using PizzaSalesAPI.Domain;
 using PizzaSalesAPI.Repository.Interfaces;
+using System.Data;
+using System.Data.Common;
 
 namespace PizzaSalesAPI.Repository
 {
@@ -36,6 +39,33 @@ namespace PizzaSalesAPI.Repository
         public void Update(T entity)
         {
             _dbContext.Set<T>().Update(entity);
+        }
+
+        public DataTable GetData(string query, params DbParameter[] parameters) {
+            DataTable dataTable = new DataTable();
+            DbConnection connection = _dbContext.Database.GetDbConnection();
+
+            DbProviderFactory dbFactory = DbProviderFactories.GetFactory(connection);
+            using (var cmd = dbFactory.CreateCommand())
+            {
+                cmd.Connection = connection;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+                if (parameters != null)
+                {
+                    foreach (var item in parameters)
+                    {
+                        cmd.Parameters.Add(item);
+                    }
+                }
+                using (DbDataAdapter adapter = dbFactory.CreateDataAdapter())
+                {
+                    adapter.SelectCommand = cmd;
+                    adapter.Fill(dataTable);
+                }
+            }
+
+            return dataTable;
         }
     }
 }

@@ -37,13 +37,17 @@ namespace PizzaSalesAPI.Infrastructure
             lineItem = lineItem.Substring(end_index + 1);
             int.TryParse(lineItem, out quantity);
 
-            this._unitOfWork.OrderDetailsRepo.Add(new OrderDetails() {
+            var entity = _unitOfWork.OrderDetailsRepo.GetById(orderId).Result;
+            if (entity != null) return true;
+
+            this._unitOfWork.OrderDetailsRepo.Add(new OrderDetails()
+            {
                 Id = id,
                 OrderId = orderId,
                 PizzaId = pizzaId,
                 Quantity = quantity
             });
- 
+
             return true;
         }
     }

@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using PizzaSalesAPI.Contracts.Input;
+using PizzaSalesAPI.Contracts.Output;
 using PizzaSalesAPI.Infrastructure;
 using PizzaSalesAPI.Repository.Interfaces;
 using PizzaSalesAPI.Services.Interfaces;
@@ -11,19 +13,23 @@ namespace PizzaSalesAPIDemo.Controllers
     public class PizzaSalesController : ControllerBase
     {
         private readonly IImportCsvService _importCSVService;
+        private readonly IOrderSummaryService _orderSummaryService;
         private readonly IUnitOfWork _unitOfWork;
         private IConfiguration Configuration;
         private ILogger _logger;
 
         public PizzaSalesController(IConfiguration _configuration, 
                                     IImportCsvService importCSVService,
+                                    IOrderSummaryService orderSummaryService,
                                     IUnitOfWork unitOfWork,
                                     ILogger logger)
         {
             _importCSVService = importCSVService;
+            _orderSummaryService = orderSummaryService;
             _unitOfWork = unitOfWork;
+            _logger = logger;
+
             Configuration = _configuration;
-            _logger = logger;   
         }
 
         [HttpPost]
@@ -42,9 +48,14 @@ namespace PizzaSalesAPIDemo.Controllers
                 _logger.LogMessage(ex.Message);
                 throw;
             }
-           
-
             return Ok();
+        }
+
+        [HttpGet]
+        [Route("GetMonthlyOrderSummary/{year}/{month}")]
+        public IActionResult GetMonthlyOrderSummary(int year, int month) {
+            OrderSummary orderSummary =  _orderSummaryService.GetMonthlyOrderSummary(new MonthlyOrderSummaryRequest() { Year = year, Month = month });
+            return Ok(orderSummary);
         }
     }
 }

@@ -25,6 +25,9 @@ namespace PizzaSalesAPI.Infrastructure
             lineItem = lineItem.Substring(end_index + 1);
             DateTime orderDate = DateTime.ParseExact(lineItem, DATE_TIME_FORMAT, System.Globalization.CultureInfo.InvariantCulture);
 
+            var entity = _unitOfWork.OrderRepo.GetById(orderId).Result;
+            if (entity != null) return true;
+
             this._unitOfWork.OrderRepo.Add(new Orders()
             {
                 Id = orderId,

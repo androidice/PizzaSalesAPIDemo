@@ -32,6 +32,8 @@ namespace PizzaSalesAPI.Infrastructure
             decimal price = 0;
             decimal.TryParse(lineItem, out price);
 
+            var entity = _unitOfWork.PizzaRepo.GetById(id).Result;
+            if (entity != null) return true;
 
             _unitOfWork.PizzaRepo.Add(new Pizzas()
             {

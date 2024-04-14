@@ -1,4 +1,7 @@
-﻿namespace PizzaSalesAPI.Repository.Interfaces
+﻿using System.Data.Common;
+using System.Data;
+
+namespace PizzaSalesAPI.Repository.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {
@@ -7,5 +10,7 @@
         Task Add(T entity);
         void Delete(T entity);
         void Update(T entity);
+
+        DataTable GetData(string query, params DbParameter[] parameters);
     }
 }
